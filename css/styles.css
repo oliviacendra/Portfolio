@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+@font-face {
+  font-family: "Gambarino-Regular";
+  src: url("../fonts/Gambarino-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Gambarino-Regular", serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+header {
+  height: calc(100vh - 3rem);
+  background-image: url(../img/header\ 2.png);
+  background-size: cover;
+  background-position: center;
+  /* Contenedor flexible para que se coloque verticalmente el h1 */
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+header > figure {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 1300px;
+  height: auto;
+}
+
+h1 {
+  font-size: 22rem;
+  color: white;
+  border-radius: 50px;
+  font-weight: lighter;
+  padding-left: 2rem;
+}
+
+h2 {
+  font-size: 6rem;
+  color: black;
+  border-radius: 50px;
+  font-weight: lighter;
+}
+
+/* Maquetación del menú */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#menu > ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  height: 3.5rem;
+  align-items: center;
+  padding: 2.5rem;
+  background-color: rgb(255, 255, 255);
+}
+
+#menu > ul > li > a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header h1 {
+  position: absolute;
+  bottom: -3rem;
+  left: 2rem;
+}
+
+header h1 {
+  bottom: -20%;
+}
+
+#sobremi h1 {
+  z-index: -1;
+  color: black;
+  position: absolute;
+  left: 2rem;
+}
+
+#sobremi h1 {
+  top: 55.5%;
+}
+
+#sobremi h2 {
+  text-align: right;
+}
+
+#sobremi > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 1300px;
+  height: auto;
+}
+
+#sobremi p {
+  margin-top: -16rem;
+  text-align: justify;
+  margin-right: 0;
+}
+
+#sobremi > div > figure {
+  margin-top: -6.5rem;
+  padding-left: 5rem;
+  flex: 0.65;
+}
+
+h2 {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  padding-right: 7rem;
+  padding-left: 5rem;
+}
+
+p {
+  padding-left: 4.5rem;
+}
+
+#sobremi > div > * {
+  flex: 1;
+}
+
+#proyectos {
+  background-color: black;
+}
+
+#proyectos h2,
+p1 {
+  color: white;
+}
+
+#proyectos > div {
+  display: flex;
+  gap: 2rem;
+  /* flex-wrap: wrap; */
+}
+
+#proyectos > div > figure {
+  position: relative;
+  flex: 1 1 250px;
+}
+
+/* #proyectos > div > figure > img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+} */
+
+#proyectos > div > figure > p {
+  color: white;
+}
+
+#proyectos > div > figure > figcaption {
+  position: absolute;
+  color: white;
+  font-weight: lighter;
+  font-style: normal;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#proyectos > div > figure > p2 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+#proyectos > div > figure > p2 {
+  position: absolute;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+  font-style: normal;
+  background-color: white;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+#proyectos > div > figure:hover > p2 {
+  opacity: 1;
+  transition: 1s;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0 2rem;
+  scroll-margin-top: 3rem;
+}
