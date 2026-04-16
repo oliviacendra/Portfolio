@@ -47,18 +47,20 @@ header > figure {
 }
 
 h1 {
-  font-size: 22rem;
-  color: white;
-  border-radius: 50px;
-  font-weight: lighter;
-  padding-left: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-left: 5rem;
 }
 
-h2 {
+h1 {
   font-size: 6rem;
   color: black;
   border-radius: 50px;
   font-weight: lighter;
+}
+
+p {
+  padding-left: 5rem;
 }
 
 /* Maquetación del menú */
@@ -81,6 +83,8 @@ h2 {
 }
 
 #menu > ul > li > a {
+  padding-left: 2rem;
+  padding-right: 2rem;
   text-decoration: none;
   font-weight: bold;
 }
@@ -91,71 +95,52 @@ header {
   overflow: hidden;
 }
 
-header h1 {
-  position: absolute;
-  bottom: -3rem;
-  left: 2rem;
+#sobremi > * {
+  align-items: center;
+  margin-top: 0rem;
 }
 
-header h1 {
-  bottom: -20%;
+#sobremi > div > div > p {
+  text-align: justify;
+  margin-right: 0;
+  align-items: center;
 }
 
-#sobremi h1 {
-  z-index: -1;
-  color: black;
-  position: absolute;
-  left: 2rem;
-}
-
-#sobremi h1 {
-  top: 55.5%;
-}
-
-#sobremi h2 {
-  text-align: right;
+#sobremi > div > div > h1 {
+  margin-bottom: 1rem;
 }
 
 #sobremi > div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
   width: 1300px;
   height: auto;
-}
-
-#sobremi p {
-  margin-top: -16rem;
-  text-align: justify;
-  margin-right: 0;
-}
-
-#sobremi > div > figure {
-  margin-top: -6.5rem;
-  padding-left: 5rem;
-  flex: 0.65;
-}
-
-h2 {
-  margin-top: 5rem;
-  padding-top: 2rem;
-  padding-right: 7rem;
-  padding-left: 5rem;
-}
-
-p {
-  padding-left: 4.5rem;
 }
 
 #sobremi > div > * {
   flex: 1;
 }
 
-#proyectos {
-  background-color: black;
+#sobremi > div > figure {
+  margin-top: 5rem;
+  padding-left: 7rem;
+  flex: 0.65;
 }
 
-#proyectos h2,
+#proyectos {
+  margin-top: -5rem;
+  background-color: black;
+  padding-bottom: 7rem;
+}
+
+#proyectos h1 {
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 0;
+}
+
+#proyectos h1,
 p1 {
   color: white;
 }
@@ -163,15 +148,18 @@ p1 {
 #proyectos > div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: 4rem;
   flex-wrap: wrap;
   grid-column-start: left;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 #proyectos > div > figure {
   position: relative;
   flex: 1 1 250px;
   justify-content: flex-start;
+  width: 600px;
 }
 
 #proyectos > div > figure > img {
@@ -180,13 +168,11 @@ p1 {
   display: block;
   object-fit: contain;
   object-position: center;
-}
-
-#proyectos > div > figure > p {
-  color: white;
+  border-radius: 25px;
 }
 
 #proyectos > div > figure > figcaption {
+  font-size: 1.25rem;
   position: absolute;
   color: white;
   font-weight: lighter;
@@ -195,21 +181,25 @@ p1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 2.5rem;
 }
 
 #proyectos > div > figure > p2 {
-  font-size: 2rem;
+  font-size: 3rem;
   position: absolute;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: lighter;
   font-style: normal;
-  background-color: rgba(255, 255, 255, 0.792);
+  border-radius: 25px;
+  background-color: rgba(255, 0, 132, 0.792);
   backdrop-filter: blur(2px);
   z-index: 1;
-  top: 1.5rem;
+  top: 0rem;
   left: 0;
   width: 100%;
-  height: 96%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,9 +218,14 @@ section {
 }
 
 /* Maquetación de la sección Contacto */
-#contacto > {
+#contacto {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+
+#contacto > div > form > p {
+  text-align: center;
+  padding-left: 0;
 }
 
 #contacto > div {
@@ -238,6 +233,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
 #contacto > div > form,
@@ -245,14 +241,15 @@ section {
   width: 100%;
 }
 
-/*Maquetación del formulario*/
+/* Maquetación del formulario*/
 #contacto > div > form > input,
 #contacto > div > form > textarea {
   display: block;
   width: 100%;
   height: 2em;
   margin: 1em 0;
-  border: #c5d4dd 1px solid;
+  border: #a2a2a2 1.5px solid;
+  border-radius: 5px;
 }
 
 #contacto > div > form > textarea {
@@ -262,7 +259,7 @@ section {
 /* Maquetación botón de enviar formulario. */
 #contacto > div > form > input[type="submit"] {
   color: black;
-  background-color: #c5d4dd;
+  background-color: rgb(255, 187, 222);
   border: none;
   width: 5em;
   margin: 1em auto;
@@ -272,7 +269,7 @@ section {
 
 #contacto > div > form > input[type="submit"]:hover {
   color: white;
-  background-color: rgb(119, 144, 201);
+  background-color: rgb(255, 0, 132);
 }
 
 #contacto > div > form > label {
