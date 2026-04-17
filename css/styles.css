@@ -82,6 +82,10 @@ p {
   background-color: rgb(255, 255, 255);
 }
 
+#menu > ul > li:first-child {
+  display: none;
+}
+
 #menu > ul > li > a {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -220,7 +224,25 @@ section {
 /* Maquetación de la sección Contacto */
 #contacto {
   display: flex;
-  /* justify-content: space-between; */
+  /* background-image: url(../img/header\ 3.jpg); */
+  background-image: url(../img/header\ 2.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+#contacto > figure {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: 750px;
+  height: 600px;
+  margin-top: 4.5rem;
+  margin-left: 12rem;
+}
+
+#contacto h1 {
+  color: white;
 }
 
 #contacto > div > form > p {
@@ -264,7 +286,7 @@ section {
   width: 5em;
   margin: 1em auto;
   cursor: pointer;
-  transition: 0.5s ease;
+  transition: 0.25s ease;
 }
 
 #contacto > div > form > input[type="submit"]:hover {
@@ -286,6 +308,15 @@ section {
   padding: 2.5rem;
   background-color: rgb(255, 255, 255);
 }
+
+/* Pantalla pequeña */
+/* #menu > ul > li:first-child {
+  display: block;
+}
+
+#menu > ul > li:not(:first-child) {
+  display: none;
+} */
 
 /* Media Queris
 @media screen and (max-width: 950px) {
