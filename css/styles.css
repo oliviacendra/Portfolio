@@ -7,7 +7,8 @@
 
 section {
   min-height: 100vh;
-  padding: 0 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   scroll-margin-top: 3rem;
 }
 
@@ -32,15 +33,16 @@ body {
 }
 
 header {
+  position: relative;
   height: calc(100vh - 3rem);
-  background-image: url(../img/header\ 2.png);
+  width: 100%;
+  background-image: url(../img/header2.png);
   background-size: cover;
   background-position: center;
-  /* Contenedor flexible para que se coloque verticalmente el h1 */
+  background-attachment: fixed;
   display: flex;
   align-items: center;
-  background-attachment: fixed;
-  padding-left: 2rem;
+  overflow-x: hidden;
 }
 
 header > figure {
@@ -128,12 +130,6 @@ p {
   background: none;
 }
 
-header {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
 #sobremi > * {
   align-items: center;
   margin-top: 0;
@@ -155,7 +151,7 @@ header {
   display: flex;
   align-items: flex-start;
   gap: 3rem;
-  width: 1400px;
+  width: auto;
   height: auto;
 }
 
@@ -172,7 +168,7 @@ header {
 #sobremi > div > div > figure {
   margin-top: -2rem;
   margin-left: 0rem;
-  width: 750px;
+  width: auto;
   height: auto;
 }
 
@@ -207,7 +203,7 @@ p1 {
   position: relative;
   flex: 1 1 250px;
   justify-content: flex-start;
-  width: 600px;
+  width: auto;
 }
 
 #proyectos > div > figure > img {
@@ -261,28 +257,28 @@ p1 {
 }
 
 /* Maquetación de la sección Contacto */
+
 #contacto {
+  position: relative;
   display: flex;
   background-image: url(../img/fondo\ azul.jpg);
   background-size: cover;
   background-position: center;
-  z-index: -1;
+  min-height: 50vh;
+  padding: 2rem;
 }
 
-/* #contacto > div {
+#contacto > h1 {
+  margin-top: 0rem;
+  text-shadow: 0 2px 10px rgb(2, 2, 29);
+}
+
+#contacto > div {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-} */
-
-#contacto > div > h1 {
-  margin-top: -5rem;
-  text-shadow: 0 2px 10px rgb(2, 3, 36);
-}
-
-#contacto > div > ul {
-  margin-top: 7rem;
+  position: absolute;
+  align-self: flex-end;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 #contacto > div > ul > li {
@@ -293,94 +289,26 @@ p1 {
 #contacto > div > ul > li > a,
 #contacto > div > ul > li > i {
   color: white;
-  text-shadow: 0 2px 10px rgb(2, 3, 36);
+  text-shadow: 0 2px 10px rgb(0, 0, 0);
 }
 
 #contacto > div > ul > li > a {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
 }
 
 #contacto > div > ul > li > i {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  align-items: first baseline;
+  justify-content: flex-end;
 }
 
-#contacto > div > form {
-  display: block;
-  margin-top: -71rem;
-  margin-left: 60rem;
-  z-index: 2;
+#contacto > div > ul > li:first-child i {
+  font-size: 1.65rem;
 }
 
 #contacto h1 {
   color: white;
-}
-
-#contacto > div > form > p {
-  text-align: left;
-  padding-left: 1.55rem;
-}
-
-#contacto > div {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#contacto > div > form,
-#contacto > div > ul {
-  width: 100%;
-}
-
-/* Maquetación del formulario*/
-#contacto > div > form > input,
-#contacto > div > form > textarea {
-  font-family: "Gambarino-Regular", serif;
-  display: block;
-  width: 15rem;
-  height: 2em;
-  margin: 1em 0;
-  border: #a2a2a2 1.5px solid;
-  border-radius: 5px;
-}
-
-#contacto > div > form > textarea {
-  height: 5em;
-}
-
-/* Maquetación botón de enviar formulario. */
-#contacto > div > form > input[type="submit"] {
-  font-family: "Gambarino-Regular", serif;
-  color: black;
-  background-color: rgba(117, 147, 174, 0.356);
-  border: none;
-  width: 5em;
-  margin: 1em auto;
-  cursor: pointer;
-  transition: 0.25s ease;
   margin: 0;
-  margin-left: 5.5rem;
-}
-
-#contacto > div > form > input[type="submit"]:hover {
-  color: white;
-  background-color: rgb(0, 0, 0);
-}
-
-#contacto > div > form > label {
-  display: none;
-}
-
-#contacto > div > figure {
-  display: flex;
-  align-items: center;
-  gap: 5rem;
-  width: 750px;
-  height: 600px;
-  margin-top: -15rem;
-  margin-left: 45rem;
-  z-index: 0;
 }
 
 * footer > ul {
@@ -388,7 +316,6 @@ p1 {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  /* height: 4rem; */
   align-items: center;
   padding: 1rem;
   padding-left: 2.5rem;
@@ -396,55 +323,159 @@ p1 {
   background-color: rgb(255, 255, 255);
 }
 
-/* Pantalla pequeña
-#menu > ul > li:first-child {
-  display: block;
-}
-
-#menu > ul > li:not(:first-child) {
-  display: none;
-} */
-
 /* Media Queris*/
-@media screen and (max-width: 950px) {
-  /*Estilos que cambian para pantallas de menos de 950px de ancho */
-  /* body {
-    background-color: rgb(0, 26, 255);
-  } */
+@media screen and (max-width: 1024px) {
+  #inicio > figure {
+    display: flex;
+    width: 1000px;
+    padding: 0;
+    margin: 0;
+  }
 
   #sobremi > div {
     flex-direction: column;
   }
-  #proyectos > div > figure {
-    flex: 1 1 200px;
+
+  #sobremi > div > figure {
+    padding: 5rem;
+    padding-bottom: 0;
+    margin: 5rem;
+    margin-bottom: 0;
   }
 
-  /* @media screen and (max-width: 500px) {
-    #transportes > div {
-      flex-direction: column;
-    }
-  } */
+  #sobremi > div > div > h1,
+  #sobremi > div > div > p {
+    margin-right: 4rem;
+    margin-left: 5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+
+  #sobremi > div > div > h1 {
+    padding-bottom: 0;
+  }
+
+  #proyectos > div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+    margin: 2rem;
+    padding: 0;
+  }
 }
 
-/* @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  #body {
+    width: 100%;
+  }
+
+  #inicio > figure {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #inicio > figure > img {
+    width: 500px;
+    padding: 0;
+    margin: -2.25rem;
+  }
+
+  #sobremi > div {
+    gap: 0;
+  }
+
+  #sobremi > div > figure {
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-left: -5;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+  }
+
+  #sobremi > div > div > figure {
+    margin-left: -1.5rem;
+    padding: 0;
+    width: 412px;
+  }
+
+  #sobremi > div > div > h1,
+  #sobremi > div > div > p {
+    margin: 0;
+    padding: 2rem;
+    padding-bottom: 2rem;
+    align-items: self-start;
+  }
+
+  #sobremi > div > div > h1 {
+    padding-bottom: 0;
+  }
+
+  #sobremi > div > div > p {
+    font-size: smaller;
+    margin-right: 2.25rem;
+  }
+  #proyectos > div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+    margin: 0.5rem;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  #proyectos > h1 {
+    padding: 1rem;
+    padding-left: 0.25rem;
+  }
+
+  #proyectos > div > figure > figcaption {
+    font-size: smaller;
+  }
+
+  #contacto > h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  #contacto > div {
+    display: flex;
+  }
+
+  #contacto > div > ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contacto > div > ul > li > a {
+    font-size: 1.5rem;
+  }
+
   h1 {
     font-size: 2rem;
   }
 
-Maquetación
   #menu > ul {
-    flex-direction: column;
-     Flex-start es justificar a la izquierda
-    align-items: flex-start;
+    align-items: center;
     height: 5rem;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 1rem;
   }
 
-  header {
-    height: calc(100vh - 5rem);
+  #menu > ul > li > a,
+  footer > ul,
+  #contacto > div > ul > li > a {
+    font-size: smaller;
   }
-
-  section {
-    scroll-margin-top: 5rem;
-  }
-} */
+}
