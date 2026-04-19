@@ -6,7 +6,7 @@
     <!-- La forma fácil de incluir comentarios es con Command + / (7 + Shift) -->
     <title>Portfolio</title>
     <meta charset="utf-8" />
-    <link href="img/fav.icon.png" rel="icon" type="image/ico" />
+    <link href="img/fav-icon.png" rel="icon" type="image/ico" />
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <!-- Iconos -->
     <script
@@ -27,10 +27,9 @@
     <nav id="menu">
       <ul>
         <li>
-          <i class="fa-solid fa-bars"></i>
-        </li>
-        <li>
-          <a href="#inicio">Olivia Cendra</a>
+          <a href="#inicio" class="sin-bg"
+            ><img src="img/fav-icon.png" alt=""
+          /></a>
         </li>
         <li>
           <a href="#proyectos">Mis proyectos</a>
@@ -48,13 +47,13 @@
       <!-- Contenedor con el contenido de la sección-->
       <div>
         <figure>
-          <img src="img/sobre mi.jpg" alt="xxxxxx" />
+          <img src="img/sobre mi.jpg" alt="" />
         </figure>
         <!-- Contenedor título + párrafo -->
         <div>
           <h1>Sobre mi</h1>
           <p>
-            ¡Hola! Soy Olivia, soy estudiante de segundo de Diseño Multimedia y
+            ¡Hola! Soy Olivia, estudiante de segundo de Diseño Multimedia y
             Gráfico y me interesa seguir aprendiendo a través de proyectos que
             me permitan explorar ideas. Disfruto enfrentándome a nuevos retos y
             contextos, porque creo que es ahí donde realmente se amplía la forma
@@ -62,6 +61,7 @@
             trabajos que muestran mi proceso, mi manera de abordar los proyectos
             y mi interés por seguir creciendo como diseñadora.
           </p>
+          <figure><img src="img/Posit.png" alt="" /></figure>
         </div>
       </div>
     </section>
@@ -73,44 +73,58 @@
         <figure>
           <p2>Ver proyecto</p2>
           <img src="img/Komvida.png" alt="Komvida" />
-          <figcaption>Rebranding de la marca “Komvida”</figcaption>
+          <figcaption>Rediseño marca “Komvida” (Branding)</figcaption>
         </figure>
         <figure>
           <p2>Ver proyecto</p2>
-          <img src="img/Alma marina.png" alt="Alma marina" />
-          <figcaption>Branding y packaging</figcaption>
+          <img src="img/Alma marina.jpg" alt="Alma marina" />
+          <figcaption>Conservas Alma Marina (Branding y packaging)</figcaption>
         </figure>
         <figure>
           <p2>Ver proyecto</p2>
           <img src="img/Grabando.png" alt="Grabando" />
-          <figcaption>Vídeo-arte “Grabando”</figcaption>
+          <figcaption>Vídeo-arte “Grabando” (Audiovisual)</figcaption>
         </figure>
         <figure>
           <p2>Ver proyecto</p2>
-          <img src="img/Oasis.png" alt="Oasis" />
-          <figcaption>Creación de una App. Diseño UX/UI.</figcaption>
+          <img src="img/Oasis.jpg" alt="Oasis" />
+          <figcaption>App Oasis (Diseño UX/UI)</figcaption>
         </figure>
         <figure>
           <p2>Ver proyecto</p2>
-          <img src="img/Calendario.png" alt="Calendario 2027" />
-          <figcaption>Calendario 2027. Diseño editorial.</figcaption>
+          <img src="img/Calendario.jpg" alt="Calendario 2027" />
+          <figcaption>Calendario 2027 (Diseño editorial)</figcaption>
         </figure>
         <figure>
           <p2>Ver proyecto</p2>
-          <img src="img/Ilustraciones.png" alt="Ilustraciones" />
-          <figcaption>Ilustraciones portadas libros infantiles</figcaption>
+          <img src="img/Ilustraciones.jpg" alt="Ilustraciones" />
+          <figcaption>Portadas libros infantiles (Ilustración)</figcaption>
         </figure>
       </div>
     </section>
 
     <section id="contacto">
-      <h1>Contacto</h1>
+      <div>
+        <h1>Contacto</h1>
+        <ul>
+          <li>
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/olv.designs/"> @olv.designs</a>
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:olivia.cendra@alumnos.udit.es">
+              olivia.cendra@alumnos.udit.es
+            </a>
+          </li>
+        </ul>
+      </div>
       <div>
         <figure>
-          <img src="img/carta.png" alt="Carta" />
+          <img src="img/carta normal.png" alt="Carta" />
         </figure>
         <form>
-          <p>Escríbeme tus comentarios</p>
+          <p>Ponte en contacto conmigo</p>
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" placeholder="Nombre" />
           <label for="correo">Correo electrónico:</label>
@@ -125,7 +139,6 @@
     <footer>
       <ul>
         <li>Olivia Cendra Calavia</li>
-        <li>Instagram</li>
         <li>®2026</li>
       </ul>
     </footer>
